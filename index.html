@@ -47,7 +47,7 @@
         const homework2Button = document.querySelector('.button-start');
         homework2Button.addEventListener('click', function (event) {
           event.preventDefault();
-          if (!checkAuthentication()) {
+          if (checkAuthentication()) {
             window.location.href = "Hogwarts.html"; // поменять!!!!!!!!!!!!!!!!!!!!
           } else {
             // Если пользователь не авторизован, перейдите на страницу "auth.html"
