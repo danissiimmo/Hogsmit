@@ -35,7 +35,7 @@
                           </div>
                         </div>
                   
-                        <form action="Hogwarts.html">
+                        <form id = "loginForm" action="Hogwarts.html">
                           <div class="row gy-3 overflow-hidden">
                             <div class="col-12">
                               <div class="form-floating mb-3">
@@ -67,10 +67,14 @@
       </section>
 
       <script>
-        // После успешной авторизации
-       // Устанавливаем куку с именем "userAuthenticated" и значением "true"
-  document.cookie = "userAuthenticated=true; path=/";
-      </script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            // Предотвращаем отправку формы по умолчанию
+            event.preventDefault();
+
+            // Если авторизация успешна, устанавливаем куку
+            document.cookie = "userAuthenticated=true; path=/";
+        });
+    </script>
 
 </body>
 </html>
