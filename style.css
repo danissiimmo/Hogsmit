@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.fullscreen-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.full {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    max-width: 30%; /* Используйте viewport width */
+    max-height: 80%; /* Используйте viewport height */
+}
+
+.fullscreen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Запрет на события нажатия */
+    user-select: none; /* Запрет на выделение текста */
+}
+
+.video-container {
+    position: absolute;
+    top: 20%;
+    left: 27%;
+    width: 50vw; /* Используйте viewport width */
+    height: 50vh; /* Используйте viewport height */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Поддержание соотношения сторон и обрезка, чтобы заполнить контейнер */
+}
