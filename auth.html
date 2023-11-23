@@ -68,15 +68,10 @@
 
       <script>
                document.getElementById('loginForm').addEventListener('submit', function(event) {
-                // Предотвращаем отправку формы по умолчанию
-                event.preventDefault();
 
                 // Здесь вы можете добавить проверки для успешной авторизации
                 // Если авторизация успешна, устанавливаем куку
                 document.cookie = "userAuthenticated=true; path=/";
-
-                // Перенаправляем пользователя на страницу Hogwarts.html
-                window.location.href = "Hogwarts.html";
             });
     </script>
 
